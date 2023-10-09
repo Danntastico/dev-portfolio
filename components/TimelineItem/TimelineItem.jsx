@@ -1,20 +1,23 @@
 import Image from 'next/image'
 import './timeline-item.sass'
+import { IconCalendar } from '@tabler/icons-react'
 
-export default function TimelineItem() {
+export default function TimelineItem({ company, imgUrl, location, role, grade, date, client }) {
   return (
-    <li className="timeline-list-item">
+    <li>
       <div className="bullet-logo">
-        <Image width={40} height={40} src='/endava.png' />
+        <Image width={40} height={40} src={imgUrl} />
       </div>
       <section className='job-definition'>
         <div className='job-title'>
-          <h4>React Developer<br/> <span>Senior Developer (engineer)</span></h4>
-          <h5>01/2023 - Present</h5>
+          <h3><strong>{company}</strong> - {location}</h3>
+          <h4>{role}<br />{grade}<span></span></h4>
+          <div className='date'>
+            <IconCalendar />
+            <h5>{date}</h5>
+          </div>
         </div>
-        <h4><strong>Endava </strong>Bogotá, Colombia</h4>
-        <p>Client: Media company focused on Digital Commerce retailer platforms (Flywheel Digital LLC)
-        </p>
+        {client && <p>Client: {client}</p>}
       </section>
     </li>
   )

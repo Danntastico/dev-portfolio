@@ -1,8 +1,16 @@
 @use './constants/_colors.scss' as *
+@use '../../styles/mixins/_media-queries.scss' as *
+@use '../../styles/constants/_breakpoints.scss' as *
+@use '../../styles/mixins/_alignment.scss' as *
 
 header
+  border-bottom: 1px solid $khaki
+
+.content
   display: flex
+  padding: 10px
   flex-direction: column-reverse
+  @include layout-borders-x
 
 .name-description
   display: flex
@@ -31,3 +39,18 @@ header
     object-fit: cover
     object-position: 28% 50%
 
+@include respond-to($medium-screen)
+  header
+    flex-direction: row
+  .name-description
+    flex: 1
+    justify-content: center
+    h1
+      text-shadow: -1px 1px 0 $ivory, 1px 1px 0 $ivory, 1px -1px 0 $ivory, -1px -1px 0 $ivory
+      max-width: 50vw
+      white-space: nowrap
+    p
+      font-size: 2.5vw
+    button
+      font-size: 20px
+      align-self: start

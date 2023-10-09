@@ -1,18 +1,11 @@
-import Image from 'next/image'
-import '@/styles/app/main.sass'
 import { Header, Timeline } from '@/components'
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Header />
-      <main>
-        <Timeline />
-      </main>
-    </>
+      <Timeline />
+    </main>
   )
 }
 
-/*
-
-*/

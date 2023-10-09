@@ -1,3 +1,5 @@
+@use '../constants/_colors.scss' as *;
+
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -6,4 +8,10 @@
 @mixin layout-dimensions {
   max-width: 1100px;
   margin: auto;
+}
+
+@mixin layout-borders-x { 
+  margin: 0 15px;
+  border-right: 1px solid $khaki;
+  border-left: 1px solid $khaki;
 }

@@ -1,9 +1,21 @@
 @use './constants/_colors.scss' as *
+@use './mixins/_alignment.scss' as *
+
+.nav-top
+  display: block
+  height: 0.5rem
+  @include layout-borders-x
 
 .nav-container
+  border-top: 1px solid $khaki
+  border-bottom: 1px solid $khaki
+
+.nav-content
+  @include layout-borders-x
+  align-items: center
   display: flex
   justify-content: space-between
-  align-items: center
+  padding: 5px 10px
   > h3
     color: $primary-color
     > span
@@ -14,6 +26,7 @@ h3
 
 body
   background-color: $ivory
+  margin: 0px
 
 button
   background-color: transparent
