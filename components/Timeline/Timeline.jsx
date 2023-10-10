@@ -1,4 +1,4 @@
-import { TimelineItem } from "..";
+import { SectionTitle, TimelineItem } from "..";
 import { TIMELINE_ITEMS } from "@/lib/constants/timeline";
 import "./timeline.sass"
 import { IconDeviceLaptop } from "@tabler/icons-react";
@@ -8,10 +8,7 @@ export default function Timeline() {
     <section className="timeline">
       <div className="section-content">
         <div className="timeline-container">
-          <div className="section-title">
-            <IconDeviceLaptop />
-            <h4>Experience</h4>
-          </div>
+          <SectionTitle icon={IconDeviceLaptop} title='Experience' />
           <ul className="timeline-list">
             {
               TIMELINE_ITEMS.map((item, ix) => (
