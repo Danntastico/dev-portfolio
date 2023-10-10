@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import '@/styles/layout.sass'
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,8 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         {children}
+        <Footer />
+        <div className='footer-bottom'/>
       </body>
     </html>
   )

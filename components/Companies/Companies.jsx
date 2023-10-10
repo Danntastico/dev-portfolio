@@ -18,7 +18,7 @@ export default function Companies() {
               alt='company-logo'
               src='/logo-endava.png'
               width={150}
-              height={150}
+              height={100}
               className='company-logo'
             />
           </Link>
