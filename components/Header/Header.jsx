@@ -13,7 +13,7 @@ export default function Header() {
           <button>Contact me!</button>
         </section>
         <section className='profile-picture'>
-          <Image alt='profile' src='/profile.png' fill></Image>
+          <Image alt='profile' src='/profile.jpg' fill></Image>
         </section>
       </div>
     </header>

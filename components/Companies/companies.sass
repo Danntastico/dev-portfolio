@@ -1,0 +1,17 @@
+@use '../../styles/mixins/_alignment.scss' as *
+@use '../../styles/constants/_colors.scss' as *
+
+.companies
+  .container
+    @include layout-borders-x
+    border-bottom: 1px solid $khaki
+    .section-title
+      margin-left: 40px
+
+    .logos-list
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      img
+        object-fit: contain
